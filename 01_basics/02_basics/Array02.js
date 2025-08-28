@@ -35,3 +35,17 @@ for(var i=0;i<emp.length;i++){
     console.log(emp[i]+"<br>");
     
 }
+
+const arr3 = [1,2,3,4,5];
+console.log(arr3.copyWithin(0,3,5));
+
+const arr = ["a", "b", "c"];
+
+// Get an iterator of [index, value] pairs
+const iterator = arr.entries();
+
+console.log(iterator.next().value); // [0, "a"]
+console.log(iterator.next().value); // [1, "b"]
+console.log(iterator.next().value); // [2, "c"]
+
+
