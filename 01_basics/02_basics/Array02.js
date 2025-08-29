@@ -47,5 +47,12 @@ const iterator = arr.entries();
 console.log(iterator.next().value); // [0, "a"]
 console.log(iterator.next().value); // [1, "b"]
 console.log(iterator.next().value); // [2, "c"]
+///filter method
+const numbers=[1,2,4,5,7,8,10,12];
+const evenArray = numbers.filter((num)=>{
+    return num%2===0;
+})
+console.log(evenArray);
+
 
 
