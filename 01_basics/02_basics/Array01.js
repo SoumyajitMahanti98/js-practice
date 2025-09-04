@@ -42,11 +42,19 @@
 // console.log(copyArray);
 // console.log(myArray);
 
-const myArray = [1,2,3,4,5];
-const copyArray = myArray.slice();
-copyArray.push(6);
-console.log(myArray);
-console.log(copyArray);
+// const myArray = [1,2,3,4,5];
+// const copyArray = myArray.slice();
+// copyArray.push(6);
+// console.log(myArray);
+// console.log(copyArray);
+
+// console.log(typeof parseInt("10A"));
+
+// // console.log(parseInt("7AB"));
+// console.log(typeof parseInt("A7B"));
+
+
+
 
 
 

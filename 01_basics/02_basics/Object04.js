@@ -64,11 +64,123 @@
 // const object = new MyNumberType(4);
 // console.log(object.number+3);
 
-const numbers = [5,6,2,3,7];
-const max = Math.max.apply(null,numbers);
-console.log(max);
-const min = Math.min.apply(null,numbers);
-console.log(min);
+// const numbers = [5,6,2,3,7];
+// const max = Math.max.apply(null,numbers);
+// console.log(max);
+// const min = Math.min.apply(null,numbers);
+// console.log(min);
+
+// const userDetails ={
+//     name : "Soumya",
+//     age:24,
+//     isAdctive : true
+// }
+// userDetails.name = "Rajesh";
+// console.log(userDetails.name);
+
+// const user = {
+//     name : "Soumya",
+//     age : 24,
+//     isActive : true
+// }
+// for ( const key in user){
+//     console.log(`${key}: ${user[key]}`); 
+// }
+
+// const obj = {
+//     a:"one",
+//     b:"two",
+//     a:"three"
+// }
+// console.log(obj);
+
+// const nums = {
+//     a:100,
+//     b:200,
+//     title : "my nums"
+// }
+// multiplyByTwo(nums);
+// function multiplyByTwo(Obj){
+//     for(const key in Obj){
+//         if( typeof Obj[key] == "number"){
+//             Obj[key] *= 2; 
+//         }
+//     }
+// }
+// console.log(nums);
+
+// const person = {
+//     firstName : "Soumyajit",
+//     lastName : "Mahanti",
+//     age : 24
+// }
+// const {firstName,lastName}=person;
+// console.log(`${firstName} ${lastName}`);
+
+// what is JSON stringify and json parse
+//  const user = {
+//     name : "Soumya",
+//     age : 24,
+//     homeTown : "Hirbandh"
+//  }
+//  const jsonData = JSON.stringify(user);
+//  console.log(typeof jsonData);
+//  console.log(typeof JSON.parse(jsonData));
+
+//another example of object destructuring ..
+// const person = {
+//     name : "Ram",
+//     age : 30
+// }
+// const {name,age} = person;
+//  console.log(`Person name is ${name} and his  age is ${age}`);
+
+ // if i want to rename the variable while destructuring
+  
+//  const person = {
+//     name : "Ram",
+//     age : 30
+// }
+// const name = "Ramesh";
+// const {name:myName} = person;
+// console.log(name);
+
+ //another example
+//  let c = {
+//     greeting : "Good Morning"
+//  }
+//  let d;
+//  d=c;
+//  c.greeting = "Good eveming";
+//  console.log(d.greeting);
+ 
+
+//anothe
+// let person = {
+//     name :"Alia"
+// }
+// let newPerson = [person];
+// person=null;
+// console.log(newPerson);
+
+let user = {
+    name : "Roadside coder",
+    age : 24
+}
+const objClone = Object.assign({},user);
+objClone.name="Soumya";
+console.log(user,objClone);
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 
