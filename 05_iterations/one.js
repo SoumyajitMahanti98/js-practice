@@ -34,17 +34,35 @@
     
 // }
 
-// Write a program to find maximum between three numbers.
-let a = 20;
-let b = 25;
-let c = 15;
-
-let max;
-if(a>=c && a>=b) {
-   max=a;
-}else if(b>=a && b>=c){
-    max=b;
-}else{
-    max=c;
+// for in loop
+const person = {
+    name : "Soumya",
+    age : 24,
+    city : "Bankura"
 }
-console.log("the maximum number is : " + max);
+for ( let i in person){
+    console.log(`${i} : ${person[i]}`);
+}
+
+// for of loop
+const colors = ["red","green","blue","yellow"];
+for(let col of colors){
+    console.log(`the colours are = ${col}:${colors[col]}`);
+}
+
+
+
+// Write a program to find maximum between three numbers.
+// let a = 20;
+// let b = 25;
+// let c = 15;
+
+// let max;
+// if(a>=c && a>=b) {
+//    max=a;
+// }else if(b>=a && b>=c){
+//     max=b;
+// }else{
+//     max=c;
+// }
+// console.log("the maximum number is : " + max);
