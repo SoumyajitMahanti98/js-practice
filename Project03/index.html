@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clock">
+    <div id="time">00:00:00</div>
+    <div id="date">Loading date...</div>
+  </div>
+
+  <script>
+       function updateTime() {
+  const timeElement = document.getElementById("time");
+  const dateElement = document.getElementById("date");
+
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+
+  timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+  dateElement.textContent = now.toDateString();
+}
+
+// run immediately once
+updateTime();
+
+// then update every second
+setInterval(updateTime, 1000);
+
+// button click event
+const btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  alert("button clicked");
+});
+
+  </script>
+</body>
+</html>
