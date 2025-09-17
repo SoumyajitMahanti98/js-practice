@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add boxes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family: cursive;">
+   <h1>Adding Event listeners </h1> 
+   <div class="container">
+        <div class="card add-card" title="add new card"> + </div>
+   </div>
+</body>
+<script>
+    const h1 = document.querySelector('h1');
+const card = document.querySelector('.card');
+const container = document.querySelector('.container');
+
+let count = 0;
+card.addEventListener("click" , ()=>{
+    const newCard = document.createElement('div');
+    newCard.classList.add('card');
+    newCard.innerText = count++;
+    container.append(newCard);
+})
+</script>
+</html>
