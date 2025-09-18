@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation another one</title>
+</head>
+<body>
+    <div id="shoppingCart">
+    <div class="cart-item">
+        <span>T-shirt</span>
+        <button class="remove-btn">Remove</button>
+    </div>
+    <div class="cart-item">
+        <span>Jeans</span>
+        <button class="remove-btn">Remove</button>
+    </div>
+    <div class="cart-item">
+        <span>Shoes</span>
+        <button class="remove-btn">Remove</button>
+    </div>
+</div>
+
+<!-- //// -->
+ <script>
+    const cart = document.getElementById('shoppingCart');
+    cart.addEventListener('click',(event)=>{
+        if(event.target.classList.contains('remove-btn')){
+            const itemToRemove = event.target.closest('.cart-item');
+            const itemName = itemToRemove.querySelector('span').textContent;
+            if(itemToRemove){
+            itemToRemove.remove();
+            alert(`${itemName} : has been removed from the shopping cart!`)
+        }
+        }
+        
+    })
+ </script>
+</body>
+</html>
