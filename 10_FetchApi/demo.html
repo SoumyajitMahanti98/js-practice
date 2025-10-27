@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Image</title>
+</head>
+
+<body>
+
+    <button id="btn">Show Random Dog 🐶</button>
+    <br><br>
+    <img id="dogImage" src="" alt="Random Dog" width="300" style="display:none; border-radius:10px;">
+
+    <script>
+        const url = "https://dog.ceo/api/breeds/image/random";
+        const btn = document.querySelector('#btn');
+        const dogImage = document.querySelector('#dogImage');
+
+        const getDogImage = async () => {
+            try {
+                console.log("Getting data...");
+                let response = await fetch(url);
+                let data = await response.json();
+                console.log(data);
+                dogImage.src = data.message;
+                dogImage.style.display = "block";
+            } catch (error) {
+                console.log("error occured", error.message);
+
+            }
+        }
+        btn.addEventListener('click', getDogImage);
+    </script>
+</body>
+
+</html>
