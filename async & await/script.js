@@ -1,17 +1,17 @@
-function resolveAfter2seconds(){
-    return new Promise(resolve=>{
-        setTimeout(()=>{
- console.log("resolved");
-        },2000)
-    })
-}
-async function asyncCall(){
-    console.log("calling..");
-    const result = await resolveAfter2seconds();
-    console.log(result);
+// function resolveAfter2seconds(){
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//  console.log("resolved");
+//         },2000)
+//     })
+// }
+// async function asyncCall(){
+//     console.log("calling..");
+//     const result = await resolveAfter2seconds();
+//     console.log(result);
     
-}
-asyncCall();
+// }
+// asyncCall();
 
 /// another example...
 async function makeasyncRequest(){
